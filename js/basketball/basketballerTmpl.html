@@ -1,11 +1,20 @@
 <h1> Ballin</h1>
-
-
-
-<p>
-  Name: {{player.name}}
-  Team: {{player.team}}
-  Age: {{player.age}}
-  Salary: {{player.salary}}
-  <button ng-click='deletePlayer(playerID)'>Ball'd To Hard </button>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name:</th>
+      <th>Team:</th>
+      <th>Age:</th>
+      <th>Salary:</th>
+    </tr>
+  </thead>
+  <tbody>
+       <tr>
+      <td><strong>{{player.name}}</strong></td>
+      <td>{{player.team}}</td>
+      <td>{{player.age}}</td>
+      <td>{{player.salary}}</td>
+    </tr>
+ </tbody>
+</table>
+  <button ng-click='removeOldPlayer(removePlayer)'>Ball'd To Hard </button>

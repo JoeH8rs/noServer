@@ -1,13 +1,6 @@
 <h1> Ball So Hard University </h1>
 
-<div ng-repeat='person in players'>
-  Name: {{person.name}}
-  Team: {{person.team}}
-  Age: {{person.age}}
-  Salary: {{person.salary}}
 
-  <a ui-sref="player({playerID:person.$id})">View Baller</a>
-</div>
 
  <div>
    <input type='text' ng-model='newPlayer.name' placeholder='Players Name'>
@@ -17,6 +10,17 @@
 
    <button ng-click ='createNewPlayer(newPlayer)'>Button</button>
    </div>
+
+<div ng-repeat='person in players'>
+    
+  Name: {{person.name}}
+  Team: {{person.team}}
+  Age: {{person.age}}
+  Salary: {{person.salary}}
+
+  <a ui-sref="player({playerID:person.$id})">View Baller</a>
+</div>
+
 
 
    <a ui-sref="player">

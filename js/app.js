@@ -22,10 +22,13 @@ $stateProvider
         templateUrl: "./js/zen/zenTmpl.html",
         controller: 'zenCtrl',
 })
+      .state('home', {
+        url: '/',
+})
           .state('games', {
           url: '/games',
           templateUrl: "./js/games/gamesTmpl.html",
-          controller: 'gameCtrl',
+          controller: 'gamesCtrl',
           });
 $urlRouterProvider.otherwise('/');
 

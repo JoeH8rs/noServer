@@ -2,6 +2,8 @@ angular.module('dojoApp')
 .service('basketballService', function($firebaseObject, $firebaseArray){
 var url = 'https://basketballplayers.firebaseio.com/';
 
+
+
 this.getPlayers = function(){
     var ref = new Firebase(url+ 'players')
       return $firebaseArray(ref);
@@ -17,8 +19,19 @@ this.getPlayers = function(){
       return $firebaseArray(ref).$add(newPlayer);
     }
 
-this.deletePlayer = function(playerID) {
-    var ref = Firebase(url+ 'players/'+ playerID)
+this.deletePlayer = function(removePlayer) {
+    var ref = new Firebase(url + 'players/' + removePlayer);
+    $remove(ref);
+//    var list = $firebaseArray(ref);
+//    var balledTooHard = function(list) {
+    //    for (var i =0; i < list.length; i++) {
+    //         if (list[i] === list[i]) {
+    //        $remove(ref);
+    //    }
+    //    }
+//    }
+    
+   
 }
 
 })

@@ -1,26 +1,21 @@
 angular.module('dojoApp')
 .controller('gamesCtrl', function($scope){
-  function TodoCtrl($scope) {
+    
+$scope.todos = [
+    {'title': 'Things I have to Do', 'Done':false}
+    ];
+    $scope.addTodo = function(){
+        $scope.todos.push({'title': $scope.newTodo, 'done': false})
+        $scope.newTodo = ''
+    }
+    $scope.clearCompleted = function(){
+        $scope.todos =$scope.todos.filter(function(item){
+            return !item.done
+        })
+    }
+    
 
-  $scope.todos = [
-    {text:'Learn AngularJS', done:false},
-    {text: 'Build an app', done:false}
-  ];
 
-  $scope.getTotalTodos = function () {
-    return $scope.todos.length;
-  };
+});
 
 
-  $scope.addTodo = function () {
-    $scope.todos.push({text:$scope.formTodoText, done:false});
-    $scope.formTodoText = '';
-  };
-
-    $scope.clearCompleted = function () {
-        $scope.todos = _.filter($scope.todos, function(todo){
-            return !todo.done;
-        });
-    };
-}
-})
