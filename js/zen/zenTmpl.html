@@ -1,35 +1,28 @@
-<br> </br>
-CALM DOWN AND REALIZE YOU ARE NOT IMPORTANT
+ <img class="errorMesage" src ='http://s21.postimg.org/85kw07err/My_Error.png'/>
+ 
+ 
+ <div class="container slider">
+ 
+        <!-- enumerate all photos -->
+        <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+ 
+        <!-- prev / next controls -->
+        <a class="arrow prev" href="#" ng-click="showPrev()"></a>
 
-<table>
-  <thead>
-    <tr>
-      <th>Exercise</th>
-      <th>Action</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Vipassana</strong></td>
-      <td>Breathing</td>
-      <td>Watch your breath with awareness</td>
-    </tr>
-    <tr>
-      <td><strong>Metta Bhavana</strong></td>
-      <td>Emotion</td>
-      <td>Become aware of yourself, and focus on feelings of peace, calm, and tranquillity.</td>
-    </tr>
-    <tr>
-      <td><strong>Mindfulness of Breathing</strong></td>
-      <td>Breathing</td>
-      <td>After the out-breath you count one, then you breathe in and out and count two, and so on up to ten, and then you start again at one.</td>
-    </tr>
-    <tr>
-      <td><strong>Mantra</strong></td>
-      <td>Chanting</td>
-      <td>Sit with spine erect, and eyes closed. Repeat the mantra in your mind, silently, over and over again during the whole session.</td>
-    </tr>
+        <a class="arrow next" href="#" ng-click="showNext()"></a>
+ 
+        <!-- extra navigation controls -->
 
-  </tbody>
-</table>
+        <ul class="nav">
+
+            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+
+                <img src="{{photo.src}}" ng-click="showPhoto($index);" />
+
+            </li>
+
+        </ul>
+
+ 
+
+    </div>

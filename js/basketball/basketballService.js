@@ -21,17 +21,23 @@ this.getPlayers = function(){
 
 this.deletePlayer = function(removePlayer) {
     var ref = new Firebase(url + 'players/' + removePlayer);
-    $remove(ref);
-//    var list = $firebaseArray(ref);
-//    var balledTooHard = function(list) {
-    //    for (var i =0; i < list.length; i++) {
-    //         if (list[i] === list[i]) {
-    //        $remove(ref);
-    //    }
-    //    }
-//    }
+    var playerObj = $firebaseObject(ref);
+    playerObj.$remove();
     
    
 }
+this.editThisPlayer = function(editPlayer){
+    var ref = new Firebase(url + 'players/' + editPlayer.id);
+   var nameSwitch = $firebaseObject(ref);
+   nameSwitch.name = editPlayer.name;
+    nameSwitch.team = editPlayer.team;
+     nameSwitch.age = editPlayer.age;
+      nameSwitch.salary = editPlayer.salary;
+//    nameSwitch.team = "player.team";
+//    nameSwitch.age = "player.age";
+//    nameSwitch.salary = "player.salary";
+   nameSwitch.$save()
+    };
+
 
 })

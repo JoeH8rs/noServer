@@ -1,20 +1,3 @@
-<div>
-<form name='frm' ng-submit='addTodo()' >
-    <input type='text' name='newTodo' ng-model='newTodo' required /> 
-        <button ng-disabled="frm.$invalid"> GO </button>
-</form>
-     
-     <button ng-click='clearCompleted()'> Clear Completed </button>
-     
- <ul>
-     <li ng-repeat = 'todo in todos'> 
-       
-      <input type='checkBox' ng-model='todo.done'/>
-      <span ng-class="{'done': todo.done}">{{todo.title}}</span>
-      
-     </li>
-  </ul>
-  
- </div>
+<games-dirt></games-dirt>
 
      

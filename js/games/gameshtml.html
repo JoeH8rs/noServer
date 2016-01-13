@@ -1,0 +1,31 @@
+<div class='todoTop'>
+    
+    <h1>What To Choose? </h1>
+    
+<form name='frm' ng-submit='addTodo()' >
+    <input class='todoInput' type='text' name='newTodo' ng-model='newTodo' placeholder =' What is for lunch?' required /> 
+        <button class='goBtn' ng-disabled="frm.$invalid"> GO </button>
+</form>
+
+                <!--Randomizer-->
+      <button class ='whatUp' ng-click= 'randomEvent()'> Choice Maker</button>
+      <div class="whatsUp" ng-model= "answers">{{ randomTodo }} </div>
+      
+      
+      <!--Clear-->
+     <button class='clearBtn' ng-click='clearCompleted()'> Changed My Mind </button>
+
+ </div> 
+  <div class="listWrap">   
+ <ul>
+     <li class='myList'' ng-repeat = 'todo in todos'> 
+       
+      <input type='checkBox' ng-model='todo.done'/>
+      <span ng-class="{'done': todo.done}">{{todo.title}}</br></span>
+      
+     </li>
+  </ul>
+  </div>
+ 
+
+     
