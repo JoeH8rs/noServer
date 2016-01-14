@@ -2,7 +2,7 @@ angular.module('dojoApp')
 .controller('gamesCtrl', function($scope){
     
     $scope.todos = [
-        {title: 'Pizza', done: false}
+        {title: 'Sam', done: false}
     ];
     
     $scope.addTodo = function(){

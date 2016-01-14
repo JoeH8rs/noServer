@@ -1,7 +1,7 @@
 
 
 <div class='todoTop'>
-    <h1>What's for lunch? </h1>
+    <h1>Who's Next </h1>
     
 <form name='frm' ng-submit='addTodo()' >
     <input class='todoInput' type='text' name='newTodo' ng-model='newTodo' placeholder =' Choices' required /> 
@@ -10,8 +10,9 @@
 
                 <!--Randomizer-->
       <button class ='whatUp' ng-click= 'randomEvent()'> Decision</button>
-       <button class='clearBtn' ng-click='clearCompleted()'> Changed My Mind </button>
       <div class="whatsUp" ng-model= "answers">{{ randomTodo }} </div>
+       <button class='clearBtn' ng-click='clearCompleted()'> Changed My Mind </button>
+    
       
       
      
@@ -23,7 +24,7 @@
      <li class='myList'' ng-repeat = 'todo in todos'> 
        
       <input type='checkBox' ng-model='todo.done'/>
-      <span ng-class="{'done': todo.done}">{{todo.title}}</br></span>
+      <span class='textInTodo' ng-class="{'done': todo.done}">{{todo.title}}</br></span>
       
      </li>
   </ul>
