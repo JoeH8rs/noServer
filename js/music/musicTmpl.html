@@ -1,6 +1,9 @@
 
 <div class="formOne">
-<input type="text" ng-model="nameFilter" placeholder="Search..."/>
+    
+  <img class ="musicHead" src ="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/F1_logo.svg/800px-F1_logo.svg.png"/>   
+    <br> </br>
+<input class="formInput" type="text" ng-model="nameFilter" placeholder="Search 2013 Championship"/>
 <table>
     <thead>
       <tr>
@@ -9,7 +12,7 @@
           <th>Team</th>
           <th>Points</th>
       </tr>
-      <tr> Who Ya Lookin For?</tr>
+      
     </thead>
     <tbody>
       <tr ng-repeat="driver in driversList| filter: nameFilter">
@@ -21,7 +24,7 @@
         <td>{{driver.Constructors[0].name}}</td>
         <td>{{driver.points}}</td>
       </tr>
-    </tbody>s
+    </tbody>
   </table>
 </body>
 </div>

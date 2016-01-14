@@ -10,15 +10,35 @@
 
    <button ng-click ='createNewPlayer(newPlayer)'>Button</button>
    </div>
+   
+   
+  
 
 <div ng-repeat='person in players'>
-    
-  Name: {{person.name}}
-  Team: {{person.team}}
-  Age: {{person.age}}
-  Salary: {{person.salary}}
+     <table>
+  <thead>
+    <tr>
+      <th>Name:</th>
+      <th>Team:</th>
+      <th>Age:</th>
+      <th>Salary:</th>
+      <th>View EM: </th>
+    </tr>
+  </thead>
+  <tbody>
+       <tr>
+      <td><strong>{{person.name}}</strong></td>
+      <td>{{person.team}}</td>
+      <td>{{person.age}}</td>
+      <td>{{person.salary}}</td>
+      <td> <a ui-sref="player({playerID:person.$id})">View Baller</a> </td>
+    </tr>
+ </tbody>
+</table>
 
-  <a ui-sref="player({playerID:person.$id})">View Baller</a>
+  
+
+  
   
 </div>
 

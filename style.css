@@ -25,6 +25,7 @@ html {
  text-align: center;
  align-items: center;
  position: absolute;
+ overflow-y: auto;
 
 
 }
@@ -88,7 +89,14 @@ margin: 10% 9%;
 .BK {
   opacity: .4;
 }
-
+.formInput {
+    padding: 0.4em 0.25em;
+	width: 50%;
+	background: transparent;
+	color: #AFB5BB;
+	font-size: 1.55em;
+    border-radius: .5;
+}
 
 
 .formOne {
@@ -96,9 +104,11 @@ margin: 10% 9%;
   overflow-y: auto;
   background: url (http://logok.org/wp-content/uploads/2014/06/F1-logo-f.png);
 }
-.imgOne {
-    width: 150px;
-    height: 75px;
+.musicHead {
+    width: 300px;
+    height: 150px;
+    padding-top: 30px;
+   
 }
 
 /*TODO*/
@@ -136,6 +146,7 @@ ul {
     margin: auto;
 }
 
+
 .todoInput {
   width: 60%;
   height: 5px;
@@ -156,6 +167,7 @@ ul {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color:white;
 }
+
 .whatsUp {
     width: 100%;
     height: 50px;
@@ -177,7 +189,7 @@ ul {
   background:#447EF3;
   font-size: 1em;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  color: #aaa;
+  color: white;
 }
 
 
