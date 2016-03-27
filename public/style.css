@@ -1,8 +1,8 @@
 body {
   margin: 0 auto;
-  height: 1000px;
+  height: 100vh;
   width: 100%;
-  
+  background-color:#6699ef;
 }
 
 html {
@@ -16,9 +16,9 @@ html {
 
 .mainDiv {
   background-color: white;
-  height: 100%;
+  height: 100vh;
   width: 80%;
-  margin: 10% 10%;
+  margin: 0 10%;
   -webkit-box-shadow: 3px 1px 5px 2px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
  -moz-box-shadow:    3px 1px 5px 2px #ccc;  /* Firefox 3.5 - 3.6 */
  box-shadow:         3px 1px 5px 2px #ccc;
@@ -65,22 +65,29 @@ html {
 }
 
 .switch {
-  height:680px;
+  height:95vh;
   width: 100%;
   background-color: white;
-
 }
+
+.info {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size:1.5em;
+  text-align: center;
+  margin-left:15%;
+  margin-right:15%;
+}
+
 .icons {
-  height: 175px;
-  width: 175px;
-  margin-top: 10%;
+  height: 25vh;
+  width: 25vh;
 }
 .dj {
-margin: 10% 9%;
+margin: 5% 9%;
 }
 
 .bb {
-  margin: 10% 9%;
+  margin: 5% 9%;
 }
 .zen {
   margin: auto 10%;
@@ -99,42 +106,52 @@ margin: 10% 9%;
     border-radius: .5;
 }
 
-
+ /*FORMULA ONE*/
+ 
 .formOne {
     height: 100%;
+    
   
-  background: url (http://logok.org/wp-content/uploads/2014/06/F1-logo-f.png);
 }
+.topHolder{
+    display:flex;
+    justify-content: space-around;
+   margin:0 auto;
+   margin-left:25%;
+   margin-right:25%;
+}
+.topHolder h1 {
+    float:right;
+    margin-right:10%;
+    display:flex;
+    margin-top:9%;
+    font-size:3em;
+     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
 .musicHead {
-    width: 300px;
-    height: 150px;
-    padding-top: 30px;
-   
+    width: 200px;
+    height: 100px;
+    padding-top: 30px; 
+    display:flex;
 }
 
 /*TODO*/
 
 .myList{
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
-  font-size: 4em;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 1em;
   padding-top: 25px;
-  
-  background: #6699FF; /* Old browsers */
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#65d8cb), to(#72f4e9));
-  background: -webkit-linear-gradient(#e6e6e6 0%, #6699FF 100%);
-  background: -moz-linear-gradient(#e6e6e6 0%, #6699FF 100%);
-  background: -o-linear-gradient(#e6e6e6 0%, #6699FF 100%);
-  background: linear-gradient(#e6e6e6 0%, #6699FF 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65d8cb', endColorstr='#72f4e9',GradientType=0 );
+  background-color:#6699ef;
   list-style-type: none;
- 
-  width: 50%;
+  float:left;
+  width: 100%;
   margin: auto;
   height: 25px;
   line-height: 0px;
- 
- 
+  margin-bottom:2%;
 }
+
 ul {
     padding: 0;
     margin-top:  5%;
@@ -149,55 +166,90 @@ ul {
 
 
 .todoInput {
-  width: 60%;
+  width:58%;
   height: 5px;
   float: left;
-  border: none;
+  border: 2px solid black;
   padding: 30px 0;
   font-size: 1em;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   text-indent: 10px;
-  background-color:#F3F4F5;
+ 
 }
-.whatUp {
-     width: 100%;
-  border: none;
-  height: 50px;
-  background:#A3BFF7;
-  font-size: 1em;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  color:white;
-}
+
 .textInTodo {
-    color:black;
-    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    font-family:  "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.5em;
     letter-spacing: 1.5px;
     
 }
 .whatsUp {
-    width: 100%;
-    height: 50px;
-    vertical-align: center;
+    width: 60%;
+    height: 60px;
+ 
     margin-top: 2%;
-  ;
-    
+   font-family:  "Palatino Linotype", "Book Antiqua", Palatino;
+    margin-top:-12%;
+    font-size:1.5em;
+    float:left;
+}
+
+.whatUp {
+  width: 38%;
+  border: underline pink;
+  height: 60px;
+  background:white;
+  font-size: 1.5em;
+  font-family:  "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color:#6699ef;
+  float:right;
+  margin-bottom: 2%;
+  margin-left:60%;
+}
+.whatUp:hover {
+    color:white;
+    background:#6699ef;
+    cursor: pointer;
 }
 
 .goBtn {
-     width: 40%;
-  border: none;
-  background: ##1160FF;
+  width: 38%;
+  border: underline pink;
+  background:white;
   padding: 0;
-  height: 65px;
-}
-.clearBtn {
-     width: 100%;
-  border: none;
-  height: 40px;
-  background:#447EF3;
-  font-size: 1em;
+  height: 60px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  color: white;
+  color:#6699ef;
+  font-size:1.5em;
+  margin-bottom:2%;
+  float:right;
+}
+.goBtn:hover{
+    background-color:#6699ef;
+    color:white;
+    cursor: pointer;
+}
+
+
+
+.clearBtn {
+  width: 38%;
+  font-size:1.5em;
+  height: 60px;
+  background:white;
+  font-size: 1.5em;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #6699ef;
+  border:underline pink;
+  margin-left:62%;
+  
+}
+.clearBtn:hover{
+    background: #6699ef;
+    color:white;
+    cursor: pointer;
+    
 }
 
 
@@ -254,19 +306,18 @@ th {
     color: #6699FF;
     padding: 10px 15px;
     position: relative;
-     font-family: Arial, Helvetica, sans-serif;
-  
+     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+     font-size:20px;
+     border: 1px solid black;
   
 }
 
 th:after {
 
-    
-    
     height: 25%;
     left: 0;
     margin: 1px 0 0 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     top: 25%;
     width: 100%;
     color: #6699ff;
@@ -277,12 +328,12 @@ th:first-child {
     
     background-color:white;
     color:#6699FF;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}     
 
 th:last-child {
-    background-color: black
-    color: white;
+    color: #6699ef;
+    border-right: 1px solid black;
     
 }
 
@@ -296,6 +347,8 @@ td {
     transition: all 300ms;
     background-color: #6699FF;
     color: white;
+    font-size:17px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     
 }
 
@@ -340,7 +393,7 @@ tbody:hover td {
 }
 
 tbody:hover tr:hover td {
-    color: #444;
+    color: black;
     text-shadow: 0 1px 0 #fff;
     
 }
@@ -550,8 +603,5 @@ footer p {
     
 
 }
-
-
-
 /*QUERY*/
 
