@@ -1,4 +1,4 @@
-<h1> Ballin</h1>
+<h1> {{player.name}} </h1>
 
 <table>
   <thead>
@@ -18,14 +18,14 @@
     </tr>
  </tbody>
 </table>
-<div>
+<div class= "editInput">
    <input type='text' ng-model='newPlayer.name' placeholder='Players Name'>
    <input type='text' ng-model='newPlayer.team' placeholder='Players Team'>
    <input type='text' ng-model='newPlayer.age' placeholder='Players Age'>
    <input type='text' ng-model='newPlayer.salary' placeholder='Players Salary'>
 <br></br>
    <button class='edit' ng-click ='editCurrentPlayer(newPlayer)'>EDIT</button>
-   <button class = 'tooHard' ng-click='removeOldPlayer(removePlayer)'>Ball'd To Death</button>
+   <button class = 'tooHard' ng-click='removeOldPlayer(removePlayer)'>Delete</button>
    </div>
    
    

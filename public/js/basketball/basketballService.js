@@ -1,6 +1,6 @@
 angular.module('dojoApp')
 .service('basketballService', function($firebaseObject, $firebaseArray){
-var url = 'https://basketballplayers.firebaseio.com/';
+var url = 'http://basketballplayers.firebaseio.com/';
 
 
 

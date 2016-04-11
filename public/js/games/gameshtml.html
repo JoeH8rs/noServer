@@ -1,5 +1,12 @@
+<section class="round-border">
+	<div>
+		<button href="#collapse1" class="nav-toggle">Description</button>
+	</div>
+	<div id="collapse1" style="display:none">
+		<p class="info">I feel like everyone and their mom has you make some version of a todo list when you are learning to code so this is my version. I created a todo list that acts as a decision maker. Input the things you can't decide between and click decide, which will randomly selects one of the items in the list. If you want to remove an item check the checkbox and click remove. </p>
+	</div>
+</section>
 
-<p class="info">I feel like everyone and their mom has you make some version of a todo list when you are learning to code, so this is my version. I created a todo list that acts as a decision maker, you simply input the things you can't decide between and click decide, which randomly selects one of the items in the list. If you want to remove an item check the checkbox and click remove. </p>
 
 <div class='todoTop'>
     <h1>Decision Maker</h1>
@@ -28,4 +35,27 @@
 </div>
 
 </div>  <!--TODOTOP -->
-     
+    
+    
+<script>
+		$(document).ready(function() {
+		  $('.nav-toggle').click(function(){
+			//get collapse content selector
+			var collapse_content_selector = $(this).attr('href');					
+					
+			//make the collapse content to be shown or hide
+			var toggle_switch = $(this);
+			$(collapse_content_selector).toggle(function(){
+			  if($(this).css('display')=='none'){
+                                //change the button label to be 'Show'
+				toggle_switch.html('Description');
+			  }else{
+                                //change the button label to be 'Hide'
+				toggle_switch.html('Remove');
+			  }
+			});
+		  });
+				
+		});	
+		</script>
+    

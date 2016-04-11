@@ -1,6 +1,17 @@
+<section class="round-border">
+	<div>
+		<button href="#collapse1" class="nav-toggle">Description</button>
+	</div>
+	<div id="collapse1" style="display:none">
+		    <p class="info"> This is a simple API call that I made that retrieves a JSON file. The end point I am hitting is <a>https://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK</a>. I wanted to understand how to display information in tables in a way that was visually appealing to myself.  </p> 
+	</div>
+</section>
+
+
+
+
 
 <div class="formOne">
-      <p class="info"> This is a simple API call that I made that retrieves a JSON file. The end point I am hitting is <a>http://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK</a>. I wanted to understand how to display information in tables in a way that was visually appealing to myself.  </p> 
   <div class="topHolder"> 
      <img class ="musicHead" src ="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/F1_logo.svg/800px-F1_logo.svg.png"/> 
      <h1> 2013 F1 RESULTS </h1>
@@ -33,24 +44,24 @@
 </body>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<div class='musicPlayer'>
-<iframe width="600" height="430" src="//www.cincopa.com/media-platform/iframe.aspx?fid=A8NAWPNoiQUZ" frameborder="0" allowfullscreen scrolling="no"></iframe><noscript><span>New Gallery 2016/1/6</span><span>Ain't No Sunshine</span><span>Ever. Life is like Seattle with out her. Whoever she is. </span><span>All About You</span><span>Its pretty sweet</span><span>All I Ask Of You</span><span>SKRIL</span><span>Attaboy</span><span>Thats some proper stuff right there. </span><span>Babel</span><span>Come on, who doesn't like a little mumford</span><span>Bad Habit</span><span>Cause the OffSpring is amazing. Thats why.</span><span>Be Easy</span><span>Thats some chill stuff right there. </span><span>Big Bank Hank </span><span>Because we all have to think at some point. </span><span>Breakin A Sweat</span><span>But it's alright. </span><span>Buzzkill </span><span>Here is what my two pennies equals. </span><span>Call All Skeletons</span><span>Double nickels on your dime. </span><span>Colorado Sunrise</span><span>BECAUSE THEY'RE BEAUTIFUL. </span><span>F.C.P.R.E.M.I.X</span><span>Guitar riffs for days </span><span>I Came As A Rat</span><span>but you left as a mouse. HA!</span><span>Night Prowler </span><span>You don't know me but you'd like too. </span><span>Some Chords</span><span>SAMMY</span></noscript>
-</div>-->
+<script>
+		$(document).ready(function() {
+		  $('.nav-toggle').click(function(){
+			//get collapse content selector
+			var collapse_content_selector = $(this).attr('href');					
+					
+			//make the collapse content to be shown or hide
+			var toggle_switch = $(this);
+			$(collapse_content_selector).toggle(function(){
+			  if($(this).css('display')=='none'){
+                                //change the button label to be 'Show'
+				toggle_switch.html('Description');
+			  }else{
+                                //change the button label to be 'Hide'
+				toggle_switch.html('Remove');
+			  }
+			});
+		  });
+				
+		});	
+		</script>

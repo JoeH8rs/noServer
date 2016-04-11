@@ -17,9 +17,9 @@ angular.module('dojoApp')
     }
     
     $scope.randomEvent = function() {
-        console.log('Running Randomizer')
+       
        	var rand = $scope.todos[Math.floor(Math.random() * $scope.todos.length)];
-           console.log(rand.title);
+           
            $scope.randomTodo = rand.title
            return ' ' + rand.title
           
